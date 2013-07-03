@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>list persons</title>
+  <link rel="stylesheet" href="../../resources/css/bootstrap.css" th:href="@{/resources/css/bootstrap.css}" />
+  <link rel="stylesheet" href="../../resources/css/bootstrap-responsive.css" th:href="@{/resources/css/bootstrap-responsive.css}" />
+</head>
+<body>
+  <div class="navbar navbar-static-top" >
+    <div class="navbar-inner">
+	  <div class="container">
+	    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+    	  <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		</a>
+	    <a class="brand" href="#">test</a>
+	      <div class="nav-collapse collapse">
+	        <ul class="nav">
+	        </ul>
+	      </div><!--/.nav-collapse -->
+	    </div>
+	  </div>
+    </div> <!-- /navbar -->
+	   
+	<div class="container">
+	  <div class="page-header">
+	    <h1>list persons</h1>
+	  </div>
+	  <div>
+        <table class="table table-condensed table-bordered table-striped">
+          <tbody>
+            <tr th:each="person : ${persons}">
+			  <td th:text="${person.id}">1</td>
+              <td th:text="${person.name}">Jonathan</td>
+            </tr>
+          </tbody>
+        </table>     
+	  </div>
+    </div> <!-- /container -->
+	
+  <script src="../../resources/js/bootstrap.js" th:src="@{/resources/js/bootstrap.js}"></script>
+</body>
+</html>
