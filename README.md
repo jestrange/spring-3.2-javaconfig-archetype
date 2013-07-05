@@ -9,7 +9,7 @@ git clone https://github.com/jestrange/spring-3.2-javaconfig-archetype.git
 
 Install the archetype:
 ==============================
-git clean install
+mvn clean install
 
 Run the archetype:
 ==============================
